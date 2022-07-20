@@ -1,0 +1,174 @@
+.content{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin:50px auto;
+    width:50%;
+    border-radius: 30px;
+    background: #FAFBFC;
+    box-shadow: 0px -1px 8px rgba(26, 26, 26, 0.12);
+  
+}
+
+.arrowLeftbtn{
+    background-color:#00809d;
+
+    border:none;
+    padding:5px 10px;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-left: 20px;
+
+}
+
+.divInputName{
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.inputName{
+    width:100%;
+   padding: 5px 1px 5px 35px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    border:none;
+    border-bottom: 1px solid #c5c3c38d
+}
+
+.spanCss{
+    font-size:14px;
+    width:70%;
+    margin:20px auto 
+}
+
+.btnRegister{
+    width:80%;
+
+    margin:10px auto 30px auto;
+    padding:10px 0px;
+    border-radius: 30px;
+    background-color:#00809d;
+    border:none;
+    font-weight:bold;
+    font-size: 20px;
+    color:white;
+
+}
+
+.hrCss{
+    border: 3px solid #00809d;
+    border-radius: 5px;
+    width: 44%;
+    background-color:#00809d
+}
+
+
+.lineDiv{
+    width:80%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin:0px auto 
+  }
+
+.spanOR{
+
+    border:2px solid #00809d;
+    padding:5px;
+    border-radius: 100%;
+}
+.h3Css{
+    width:80%;
+    margin:10px auto;
+    font-weight: bold;
+
+}
+.h6Css{
+    width:80%;
+    margin:10px auto;
+    color:#c2bfbfb8
+}
+
+.header{
+   display:flex;
+   flex-direction: row;
+   background-color:#00809d;
+   padding:30px 0px;
+   justify-content:space-between;
+   border-top-right-radius: 30px;
+   border-top-left-radius: 30px;
+   color:white
+
+
+
+}
+
+
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    margin:20px auto;
+    justify-content:space-around;
+    padding:5px 0px;
+    border-radius: 30px;
+    border:none;
+    background: #FAFBFC;
+    box-shadow: 0px -1px 8px rgba(26, 26, 26, 0.12);
+}
+
+.pic{
+    width:40px;
+    height:40px
+}
+
+.btnLogin{
+    border:none;
+background-color: white;
+font-size:16px;
+font-weight: bold;
+}
+
+@media screen and (max-width: 570px) {
+
+    .content{
+        width:70%
+    }
+
+    .spanCss{
+        font-size:12px;
+    }
+   
+}
+
+@media screen and (max-width: 528px) {
+
+    .content{
+        width:70%
+    }
+
+    .spanCss{
+        font-size:9px;
+    }
+    .hrCss{
+        width:40%
+    }
+   
+}
+@media screen and (max-width: 430px) {
+
+    .content{
+        width:70%
+    }
+
+    .spanCss{
+        font-size:9px;
+    }
+    .hrCss{
+        width:40%
+    }
+   
+}
