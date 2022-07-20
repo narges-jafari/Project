@@ -46,8 +46,9 @@
 }
 
 .spanCss{
-    width:100%;
-    padding: 1px 30px 1px 0px;
+    width:90%;
+    margin:2px auto;
+    font-size:13px
 }
 
 .btnRegister{
@@ -127,7 +128,9 @@
 
 .pic{
     width:40px;
-    height:40px
+    height:40px;
+    border-radius: 30px;
+
 }
 
 .btnLogin{
@@ -135,6 +138,7 @@
 background-color: white;
 font-size:16px;
 font-weight: bold;
+border-radius: 30px;
 }
 
 @media screen and (max-width: 570px) {
@@ -170,10 +174,14 @@ font-weight: bold;
     }
 
     .spanCss{
-        font-size:10px;
+        font-size:9px;
     }
     .hrCss{
         width:40%
+    }
+
+    .btnLogin{
+        font-size: 10px;
     }
    
 }

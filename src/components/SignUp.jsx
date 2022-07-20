@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from '../assets/styles/SignUp.module.css'
 import icon1 from '../assets/img/google.PNG'
 import icon2 from '../assets/img/facebook.PNG'
-import 'react-toastify/dist/ReactToastify.css'
 const SignUp = () => {
   const [name, setName] = useState('')
   const [mobile, setMobile] = useState('')
@@ -67,7 +66,8 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try {const res = await fetch('https://dummyjson.com/users/add', {
+    try {
+      const res = await fetch('https://dummyjson.com/users/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -179,7 +179,7 @@ const SignUp = () => {
           <button className={styles.btnLogin}>Login with Facebok</button>
         </div>
 
-        <div className='d-flex flex-row flex-w-rap justify-content-center'>
+        <div className='d-flex flex-row flex-w-rap justify-content-center my-4'>
           <span className='text-secondary px-2'>New member?</span>
           <span style={{ color: '#00809d' }}>Sign Up</span>
         </div>
