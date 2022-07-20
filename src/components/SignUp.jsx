@@ -14,8 +14,6 @@ const SignUp = () => {
   const [errorUsername, setErrorUsername] = useState(null)
   const [, setMessage] = useState('')
 
-  //VALIDATION
-
   function isValidEmail (email) {
     return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)
   }
