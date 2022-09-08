@@ -9,7 +9,6 @@ const Header = () => {
   const submit = JSON.parse(localStorage.getItem('submit'))
   const result = filter.length
 
-  console.log(result)
 
   return (
     <>

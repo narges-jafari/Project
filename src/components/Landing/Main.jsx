@@ -67,7 +67,6 @@ const Main = () => {
 
   // Show Modal
   const showModal = (record) => {
-    console.log(record)
     setmodaldata(record)
     setIsModalVisible(true)
   }
@@ -103,7 +102,6 @@ const Main = () => {
       }
     }).then((response) => {
       if (response.status === 200) {
-        console.log(response.json())
         setShowName('')
         setShowAddress('')
         setShowEmail('')
@@ -140,7 +138,8 @@ const Main = () => {
 
       <Modal show={isModalVisible}>
         <Modal.Header style={{ backgroundColor: '#ddd' }}>
-          <Modal.Title>Edit User Information</Modal.Title>
+        {showEdit?
+           <Modal.Title>Edit User Information</Modal.Title>:   <Modal.Title> User Information</Modal.Title>}
         </Modal.Header>
         <Modal.Body>
 
