@@ -1,23 +1,15 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../../assets/styles/Header.module.css'
 
 const Header = () => {
   const password = JSON.parse(localStorage.getItem('password'))
   const username = JSON.parse(localStorage.getItem('username'))
-  const sub = JSON.parse(localStorage.getItem('submit'))
-  const result = sub.length
-  //   const data = JSON.parse(localStorage.getItem('data'));
+  const filter = JSON.parse(localStorage.getItem('filter'))
+  const submit = JSON.parse(localStorage.getItem('submit'))
+  const result = filter.length
 
-  // const showData =data.map((item)=>{
-  //   <p>{item.id}</p>
-  // })
-  // if(sub ){
-  //   return
-  // }else{
-  //   return 'niiii'
-  //   }
-
+ 
   console.log(result)
 
   return (
@@ -30,7 +22,10 @@ const Header = () => {
 
         </div>
         <div className={styles.headerContentItemCss}>
-          <span>Result:{result}</span>
+          {submit?
+          <span>Result:{result}</span>:
+          <span>Result:0</span>
+          }
 
         </div>
 

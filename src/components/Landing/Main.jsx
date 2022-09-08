@@ -31,12 +31,11 @@ const Main = () => {
     {
       title: 'Name',
       dataIndex: 'name',
-      style: { color: 'red' }
 
     },
     {
       title: 'Email',
-      dataIndex: 'emailss'
+      dataIndex: 'emailss',
 
     },
     {
@@ -58,7 +57,7 @@ const Main = () => {
   useEffect(() => {
     getData()
   }, [], localStorage.setItem('data', JSON.stringify(data)), [data],
-  localStorage.setItem('submit', JSON.stringify(filtered)), [filtered])
+  localStorage.setItem('filter', JSON.stringify(filtered)), [filtered],localStorage.setItem('submit', JSON.stringify(submittedInput)), [submittedInput])
 
   // Cancle Modal
   const handleCancel = () => {
@@ -103,7 +102,7 @@ const Main = () => {
 			  'Content-type': 'application/json; charset=UTF-8'
       }
     }).then((response) => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         console.log(response.json())
         setShowName('')
         setShowAddress('')
@@ -128,17 +127,15 @@ const Main = () => {
       </div>
 
       <Content className={styles.tableContentCss}>
-        <Row>
 
           <div className={styles.tableDivCss}>
             {!submittedInput
               ? <Table
-                  responsive dataSource={data} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }}
+                   scroll={{ x: true }}  dataSource={data} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }}
                 />
-              : <Table responsive dataSource={filtered} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['4', '10'] }} />}
+              : <Table  scroll={{ x: true }}   dataSource={filtered} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }} />}
           </div>
           <Col span={3} />
-        </Row>
       </Content>
 
       <Modal show={isModalVisible}>

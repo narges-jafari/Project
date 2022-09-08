@@ -7,13 +7,16 @@
 
 }
 
+
+
 .tableContentCss{
     width: 75%;
     background-color:white;
     box-shadow: 1px 2px 4px 1px #ddd;
     margin:40px auto;
     border-radius: 10px;
-    direction: ltr
+    direction: ltr;
+
 
 }
 
