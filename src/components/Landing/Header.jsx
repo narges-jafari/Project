@@ -9,7 +9,6 @@ const Header = () => {
   const submit = JSON.parse(localStorage.getItem('submit'))
   const result = filter.length
 
- 
   console.log(result)
 
   return (
@@ -22,10 +21,9 @@ const Header = () => {
 
         </div>
         <div className={styles.headerContentItemCss}>
-          {submit?
-          <span>Result:{result}</span>:
-          <span>Result:0</span>
-          }
+          {submit
+            ? <span>Result:{result}</span>
+            : <span>Result:0</span>}
 
         </div>
 

@@ -30,12 +30,12 @@ const Main = () => {
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name',
+      dataIndex: 'name'
 
     },
     {
       title: 'Email',
-      dataIndex: 'emailss',
+      dataIndex: 'emailss'
 
     },
     {
@@ -57,7 +57,7 @@ const Main = () => {
   useEffect(() => {
     getData()
   }, [], localStorage.setItem('data', JSON.stringify(data)), [data],
-  localStorage.setItem('filter', JSON.stringify(filtered)), [filtered],localStorage.setItem('submit', JSON.stringify(submittedInput)), [submittedInput])
+  localStorage.setItem('filter', JSON.stringify(filtered)), [filtered], localStorage.setItem('submit', JSON.stringify(submittedInput)), [submittedInput])
 
   // Cancle Modal
   const handleCancel = () => {
@@ -128,14 +128,14 @@ const Main = () => {
 
       <Content className={styles.tableContentCss}>
 
-          <div className={styles.tableDivCss}>
-            {!submittedInput
-              ? <Table
-                   scroll={{ x: true }}  dataSource={data} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }}
-                />
-              : <Table  scroll={{ x: true }}   dataSource={filtered} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }} />}
-          </div>
-          <Col span={3} />
+        <div className={styles.tableDivCss}>
+          {!submittedInput
+            ? <Table
+                scroll={{ x: true }} dataSource={data} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }}
+              />
+            : <Table scroll={{ x: true }} dataSource={filtered} columns={columns} pagination={{ className: 'pagination mx-4', defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5', '10'] }} />}
+        </div>
+        <Col span={3} />
       </Content>
 
       <Modal show={isModalVisible}>
